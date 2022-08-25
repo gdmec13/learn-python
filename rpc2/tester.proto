@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+
+package mytest;
+
+service Tester {
+  rpc Add(NumberPair) returns (NumberResult);
+  rpc Merge(StringPair) returns (StringResult);
+}
+
+message NumberPair {
+  int32 num1 = 1;
+  int32 num2 = 2;
+}
+
+message NumberResult {
+  int32 value = 1;
+}
+
+message StringPair {
+  string str1 = 1;
+  string str2 = 2;
+}
+
+message StringResult {
+  string value = 1;
+}
